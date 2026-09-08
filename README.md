@@ -1,2 +1,2 @@
-# site-pra-a
+# site-praca
 site feito para a revitalização da praça Américo ferreira de abreu
