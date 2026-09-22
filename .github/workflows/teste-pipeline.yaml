@@ -1,0 +1,15 @@
+name: Teste Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - feature/**
+
+jobs:
+  pipeline:
+    uses: Mat3us-tech/pipeline-templates/.github/workflows/exec-templates.yaml@main
+
+    with:
+      STACK_TYPE: react
