@@ -1,0 +1,8 @@
+.hero{padding-top:2.5rem;overflow:hidden}
+.hero-grade{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center}
+.hero p{margin:1rem 0}
+.colagem{position:relative;min-height:380px}
+.colagem::before{content:"";position:absolute;inset:8% 6% 0 12%;background:linear-gradient(100deg,var(--laranja) 33%,var(--rosa) 33% 66%,var(--azul) 66%);transform:skewX(-6deg);border-radius:8px;opacity:.9}
+.colagem .foto{position:absolute;box-shadow:0 6px 0 rgba(0,0,0,.15)}
+.f1{width:62%;top:0;left:0}.f2{width:52%;right:0;top:30%}.f3{width:44%;left:14%;bottom:0}
+@media(max-width:760px){.hero-grade{grid-template-columns:1fr}.colagem{min-height:320px}}

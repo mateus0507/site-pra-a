@@ -1,0 +1,8 @@
+.intro{font-size:1.25rem;margin:1rem 0 2rem}
+.modelo{aspect-ratio:16/9;margin-bottom:1.5rem}
+.antes-depois figure{margin:0}.antes-depois figcaption{font-weight:800;margin-top:.4rem}
+.etapas{list-style:none;padding:0;display:grid;gap:1rem;margin-top:1rem}
+.etapas li{display:flex;gap:1.2rem;align-items:center;background:rgba(255,255,255,.14);padding:1rem 1.3rem;border-radius:6px 20px 6px 20px}
+.tag{flex:none;width:9.5rem;text-align:center;font-weight:800;padding:.3rem .6rem;border-radius:999px;color:var(--texto)}
+.pronto{background:#8be0ae}.andamento{background:var(--amarelo)}.previsto{background:var(--rosa-claro)}
+@media(max-width:760px){.etapas li{flex-direction:column;align-items:flex-start}}
