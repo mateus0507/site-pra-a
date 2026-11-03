@@ -66,3 +66,100 @@ textarea {
 form .btn {
     justify-self: start;
 }
+
+/* CARROSSEL FLUTUANTE  */
+
+.comentarios-flutuantes {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    background: #ffffff;
+    border-top: 5px solid #52c8e3;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.comentarios-flutuantes h3 {
+    font-size: 16px;
+    margin: 0 0 12px;
+    color: #1d2733;
+}
+
+.comentarios-flutuantes #mensagens {
+    display: block;
+    height: 140px;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.comentarios-flutuantes .msg {
+    display: none;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background: #eef6fb;
+    border-radius: 12px;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+}
+
+.comentarios-flutuantes .msg.ativa {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    animation: surgir 0.5s ease;
+}
+
+.controle-comentarios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.controle-comentarios button {
+    background: #e90072;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.controle-comentarios button:hover {
+    background: #c90062;
+}
+
+#contador-comentarios {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .comentarios-flutuantes {
+        width: 280px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
