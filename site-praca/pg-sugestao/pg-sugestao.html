@@ -51,12 +51,21 @@
 
                 <!-- Área do chat -->
                 <div class="chat">
-                    <ul id="mensagens" aria-live="polite">
-                        <li class="msg">
-                            <strong>PANA Projetos</strong>
-                            <span>Mensagem de boas-vindas. Escreva sua sugestão abaixo.</span>
-                        </li>
-                    </ul>
+
+<!-- Carrossel flutuante de comentários -->
+<div class="comentarios-flutuantes">
+    <h3>💬 Sugestões dos moradores</h3>
+
+    <ul id="mensagens" aria-live="off"></ul>
+
+    <div class="controle-comentarios">
+        <button type="button" id="comentario-anterior" aria-label="Comentário anterior"></button>
+
+        <span id="contador-comentarios">0 / 0</span>
+
+        <button type="button" id="comentario-proximo" aria-label="Próximo comentário"></button>
+    </div>
+</div>
 
                     <!-- Formulário de sugestões -->
                     <form id="form-chat">
