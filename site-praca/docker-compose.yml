@@ -1,0 +1,23 @@
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: pana-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: pana
+      POSTGRES_PASSWORD: pana_dev_2026
+      POSTGRES_DB: pana_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pana_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pana -d pana_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pana_postgres_data:
+
